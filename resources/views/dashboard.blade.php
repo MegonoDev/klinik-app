@@ -1,7 +1,7 @@
 
 @extends('layouts/app')
 @section('title')
-    jyhcvfkjvgf
+    Dashboard
 @endsection
 @section('content')
 <div class="px-8 py-6">

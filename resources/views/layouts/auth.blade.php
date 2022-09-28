@@ -13,7 +13,9 @@
         @stack('styles')
     </head>
     <body class="bg-[#F5F5F9] min-h-screen font-poppins antialiased">
-        @yield('content')
+        <main>
+            @yield('content')
+        </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
         <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
         <!-- Spesific Scripts -->
