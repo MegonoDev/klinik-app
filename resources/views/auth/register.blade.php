@@ -39,7 +39,7 @@
                 </button>
                 @if (Route::has('login'))
                 <p class="text-sm text-dark text-center">
-                    Tidak punya akun? <a href="#" class="font-medium text-primary hover:underline">Masuk Disini</a>
+                    Tidak punya akun? <a href="{{route('login')}}" class="font-medium text-primary hover:underline">Masuk Disini</a>
                 </p>
                 @endif
             </form>
