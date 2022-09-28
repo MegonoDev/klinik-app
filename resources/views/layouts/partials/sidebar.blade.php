@@ -1,4 +1,4 @@
-<aside class="w-full lg:w-64 bg-white lg:min-h-screen" x-data="{ isOpen: false }">
+<aside class="w-full md:w-64 bg-white md:min-h-screen shadow-sm" x-data="{ isOpen: false }">
     <div class="flex items-center justify-between p-4 h-16">
         <a href="#" class="flex items-center justify-center md:mx-auto">
             <i class="fa-solid fa-kit-medical text-primary fa-xl"></i>
@@ -7,16 +7,13 @@
         <div class="flex md:hidden">
             <button type="button" @click="isOpen = !isOpen"
                     class="text-gray-300 hover:text-gray-500 focus:outline-none focus:text-gray-500">
-                {{-- <svg class="fill-current w-8" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg> --}}
-                <img class="mr-2 w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                <img class="mr-2 w-8 h-8 rounded-full" src="{{asset('img/user.png')}}" alt="user photo">
             </button>
         </div>
     </div>
     <div class="px-2 py-6 md:block" :class="isOpen? 'block': 'hidden'" >
         <ul>
+            <span class="text-sm text-dark font-medium px-2 mb-3">Menu</span>
             <li class="px-2 py-3 bg-light_primary rounded">
                 <a href="#" class="flex items-center">
                     <i class="fa-solid fa-house text-primary"></i>
@@ -74,15 +71,15 @@
                 </a>
             </li> --}}
         </ul>
-        <div class="border-t border-gray-700 -mx-2 mt-2 md:hidden"></div>
+        <div class="border-t border-gray-200 -mx-2 mt-2 md:hidden"></div>
         <ul class="mt-6 md:hidden">
-            <li class="px-2 py-3 hover:bg-gray-900 rounded mt-2">
-                <a href="#" class="mx-2 text-gray-300">Account Settings</a>
+            <li class="px-2 py-3 hover:bg-gray-100 rounded mt-2">
+                <a href="#" class="mx-2 text-dark"><i class="fa-solid fa-gear mr-2"></i>Pengaturan</a>
             </li>
-            <li class="px-2 py-3 hover:bg-gray-900 rounded mt-2">
+            <li class="px-2 py-3 hover:bg-gray-100 rounded mt-2">
               <form action="{{route('logout')}}" method="post">
                 @csrf
-                <button class="mx-2 text-gray-300" type="submit">Logout</button>
+                <button class="mx-2 text-dark" type="submit"><i class="fa-solid fa-right-from-bracket mr-2"></i>Keluar</button>
               </form>
             </li>
         </ul>

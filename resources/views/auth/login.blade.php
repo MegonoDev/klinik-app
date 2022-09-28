@@ -1,56 +1,50 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts/auth')
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+@section('title')
+    Login
+@endsection
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+@section('content')
+<main>
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <a href="#" class="flex items-center mb-6">
+             <i class="fa-solid fa-kit-medical text-primary fa-2x"></i>
+            <span class="text-dark text-2xl font-bold mx-2">{{ config('app.name') }}</span>
+        </a>
+        <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1 class="text-xl font-semibold text-primary text-transform: uppercase">
+                    Login
+                </h1>
+                <form class="space-y-4 md:space-y-6" action="{{route('login')}}" method="POST">
+                    @csrf
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-dark">Email</label>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-dark sm:text-sm rounded-lg focus:ring-primary focus:border-light_primary block w-full p-2.5" placeholder="Masukkan Email Anda" required>
+                    </div>
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-medium text-dark">Password</label>
+                        <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-dark sm:text-sm rounded-lg focus:ring-primary focus:border-light_primary block w-full p-2.5" placeholder="Masukkan Password Anda" required>
+                    </div>
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-input-label for="email" :value="__('Email')" />
-
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                    <div class="items-center">
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                            <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded text-primary bg-gray-50 focus:ring-1 focus:ring-light_primary">
+                            </div>
+                            <div class="ml-1.5 text-sm">
+                            <label for="remember" class="text-dark">Remember me</label>
+                            </div>
+                        </div>
+                        {{-- <a href="#" class="text-sm text-primary font-medium hover:underline">Lupa Password</a> --}}
+                    </div>
+                    <button type="submit" class="w-full text-white bg-primary hover:bg-indigo-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Masuk</button>
+                    <p class="text-sm text-dark text-center">
+                        Tidak memiliki akun? <a href="#" class="font-medium text-primary hover:underline">Daftar Disini</a>
+                    </p>
+                </form>
             </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-input-label for="password" :value="__('Password')" />
-
-                <x-text-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-            </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-primary-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-primary-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+        </div>
+    </div>
+</main>
+@endsection
