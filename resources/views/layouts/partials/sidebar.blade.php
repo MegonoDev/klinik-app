@@ -23,7 +23,7 @@
             <li class="px-2 py-3 hover:bg-gray-100 rounded mt-2 hover:text-primary">
                 <a href="#" class="flex items-center">
                     <i class="fa-solid fa-user text-dark"></i>
-                    <span class="mx-2 text-dark">Pengguna</span>
+                    <span class="mx-2 text-dark">Register</span>
                 </a>
             </li>
             {{-- <li class="px-2 py-3 hover:bg-gray-900 rounded mt-2">

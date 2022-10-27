@@ -14,7 +14,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ["Nunito", ...defaultTheme.fontFamily.sans],
-                poppins: ["Poppins", "sans-serif"],
+                publicSans: ["Public Sans", "sans-serif"],
             },
             colors: {
                 primary: "#696cff",
