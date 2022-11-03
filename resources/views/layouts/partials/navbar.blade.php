@@ -1,4 +1,4 @@
-<nav class="hidden md:flex sm:flex justify-end sm:justify-end items-center sm_items-center bg-white sm:bg-white p-4 sm:p-4 shadow-sm sm:shadow-sm h-16 sm:h-26">
+<nav class="hidden md:flex sm:flex justify-end sm:justify-end items-center sm:items-center bg-white sm:bg-white p-4 sm:p-4 shadow-sm sm:shadow-sm h-16 sm:h-26">
     {{-- <div>
         <input class="px-4 py-2 border border-white rounded focus:outline-none" type="text"
             placeholder="Search.."/>
