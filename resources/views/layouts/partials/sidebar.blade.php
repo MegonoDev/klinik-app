@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li class="px-2 py-3 hover:bg-gray-100 rounded mt-2 hover:text-primary">
-                <a href="#" class="flex items-center">
+                <a href="{{ route('registrasi.index') }}" class="flex items-center">
                     <i class="fa-solid fa-user text-dark"></i>
                     <span class="mx-2 text-dark">Register</span>
                 </a>
