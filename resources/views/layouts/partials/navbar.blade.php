@@ -6,7 +6,7 @@
         <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNav" class="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-primary md:mr-0 focus:ring-4 focus:ring-gray-100" type="button">
             <span class="sr-only">Open user menu</span>
             <img class="mr-2 w-8 h-8 rounded-full" src="{{asset('img/user.png')}}" alt="user photo">
-            <span class="text-transform: capitalize">{{Auth::user()->name }}</span>
+            <span class="text-dark text-normal">{{Auth::user()->name }}</span>
             <i class="fa-solid fa-chevron-down mx-2 fa-xs"></i>
         </button>
         <!-- Dropdown menu -->
