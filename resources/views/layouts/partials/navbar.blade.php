@@ -1,19 +1,6 @@
 <nav class="hidden md:flex sm:flex justify-end sm:justify-end items-center sm:items-center bg-white sm:bg-white p-4 sm:p-4 shadow-sm sm:shadow-sm h-16 sm:h-26">
     {{-- <div>
-        <input class="px-4 py-2 border border-white rounded focus:outline-none" type="text"
-            placeholder="Search.."/>
-    </div> --}}
-    {{-- <div>
-        <form action="{{route('logout')}}" method="post">
-            @csrf
-            <button class="mx-2 text-gray-700 focus:outline-none" type="submit">
-                <svg class="h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                        d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
-                </svg>
-            </button>
-        </form>
+        <button @click="isOpen = !isOpen"><i class="fa-solid fa-bars"></i></button>
     </div> --}}
     <div>
         <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNav" class="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-primary md:mr-0 focus:ring-4 focus:ring-gray-100" type="button">
