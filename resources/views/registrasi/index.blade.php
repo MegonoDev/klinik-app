@@ -16,14 +16,14 @@
             <x-slot name="icon">
                 <i class="fa-solid fa-book fa-2x mr-2"></i>
             </x-slot>
-            {{ __('Referensi') }}
+            {{ __('Rawat Jalan') }}
         </x-menu-card>
 
         <x-menu-card>
             <x-slot name="icon">
                 <i class="fa-solid fa-users fa-2x mr-2"></i>
             </x-slot>
-            {{ __('Administrasi') }}
+            {{ __('Rawat Inap') }}
         </x-menu-card>
     </div>
 @endsection

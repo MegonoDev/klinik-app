@@ -21,6 +21,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('registrasi', 'RegistrasiController@index')->name('registrasi.index');
+Route::get('master', function() {
+    return view('master.index');
+})->name('master');
+
+Route::get('registrasi', 'RegistrasiController@index')->name('registrasi');
 
 require __DIR__.'/auth.php';

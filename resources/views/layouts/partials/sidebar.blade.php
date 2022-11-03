@@ -1,5 +1,5 @@
 <aside class="w-full md:w-64 bg-white md:min-h-screen shadow-sm" x-data="{ isOpen: false }">
-    <div class="flex items-center justify-between p-4 h-16">
+    <div class="flex items-center justify-between p-3 h-16">
         <a href="#" class="flex items-center justify-center md:mx-auto">
             <i class="fa-solid fa-kit-medical text-primary fa-xl"></i>
             <span class="text-dark text-xl font-bold mx-2">{{ config('app.name') }}</span>
@@ -15,13 +15,19 @@
         <ul>
             <span class="text-sm text-dark font-medium px-2 mb-3">Menu</span>
             <li class="px-2 py-3 bg-light_primary rounded">
-                <a href="#" class="flex items-center">
+                <a href="{{ route('dashboard') }}" class="flex items-center">
                     <i class="fa-solid fa-house text-primary"></i>
                     <span class="mx-2 text-primary">Dashboard</span>
                 </a>
             </li>
+             <li class="px-2 py-3 hover:bg-gray-100 rounded mt-2 hover:text-primary">
+                <a href="{{ route('master') }}" class="flex items-center">
+                    <i class="fa-solid fa-book text-dark"></i>
+                    <span class="mx-2 text-dark">Master</span>
+                </a>
+            </li>
             <li class="px-2 py-3 hover:bg-gray-100 rounded mt-2 hover:text-primary">
-                <a href="{{ route('registrasi.index') }}" class="flex items-center">
+                <a href="{{ route('registrasi') }}" class="flex items-center">
                     <i class="fa-solid fa-user text-dark"></i>
                     <span class="mx-2 text-dark">Register</span>
                 </a>
